@@ -1,0 +1,124 @@
+/* styles.css */
+
+/* Problema: No se define un esquema de colores claro */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    /* Problema: Uso de un color que puede ser demasiado claro */
+    color: #333;
+    /* Problema: Contraste insuficiente con el fondo */
+    margin: 0;
+}
+
+header {
+    background-color: #282e2e;
+    /* Problema: Falta de contraste con el texto */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 80vh;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+nav li {
+    margin: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    /* Problema: Color sin consideración de accesibilidad */
+}
+
+nav a:active {
+    text-decoration: underline white 2px;
+}
+
+a:hover {
+    color: rgb(245, 84, 84);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+main section {
+    width: 75%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #282e2e;
+    /* Problema: Uso de bordes poco visibles */
+    border-radius: 5px;
+    box-shadow: #282e2e 2px 2px 1px;
+
+}
+
+main section:hover {
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+
+form label {
+    text-align: start;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    /* Problema: Aplicado sin considerar el contexto */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    /* Problema: Color de botón que no resalta suficientemente */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#contacto {
+    margin-bottom: 50px;
+}
+
+#sobre_nosotros {
+    margin-top: 50px;
+
+}
+.link{
+    color: white;
+}
+h2{
+    text-transform: capitalize;
+}
+p{
+    color: #282e2e;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #282e2e;
+    /* Problema: Color similar al texto del pie de página */
+    font-size: 0.8em;
+}

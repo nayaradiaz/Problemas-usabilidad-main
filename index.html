@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Usability Test Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div><!-- Problema: El título no es claro sobre el propósito del sitio -->
+            <h1>Bienvenido al Departamento de Informatica</h1>
+        </div>
+        <div>
+            <nav>
+                <!-- Problema: Navegación no accesible, falta de etiquetas semánticas -->
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+
+    <main id="inicio">
+
+
+
+
+        <!-- Problema: Contenido confuso y no estructurado -->
+        <section id="sobre_nosotros">
+            <h2>Información importante</h2>
+            <p>123456789</p>
+            <p>"Lorem ipsum"</p>
+            <a href="https://example.com">https://example.com</a>
+        </section>
+
+        <!-- Problema: Falta de contraste entre el texto y el fondo -->
+        <section style="background-color: rgb(252, 97, 97); color: rgb(0, 0, 0); " id="servicios">
+            <h2>Nuestros servicios</h2>
+            <p>Ofrecemos los mejores servicios en la industria. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <!-- Problema: Enlace genérico sin contexto adecuado -->
+            <a href="index.html" class="link">Ver mas Servicios</a>
+        </section>
+        <!-- Problema: Formulario con errores de diseño y falta de validación -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <!-- Problema: Falta de tamaño adecuado para el campo -->
+                <input type="text" id="name" name="name">
+
+                <label for="email">Correo electrónico:</label>
+                <!-- Problema: No hay validación de tipo de correo electrónico -->
+                <input type="text" id="email" name="email">
+
+                <label for="message">Mensaje:</label>
+                <!-- Problema: Área de texto demasiado pequeña -->
+                <textarea id="message" name="message" rows="1" cols="20"></textarea>
+
+                <!-- Problema: Botón con texto ambiguo -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Problema: Texto pequeño y sin contraste adecuado -->
+        <p style="font-size: 13px; color: rgb(255, 255, 255);">Derechos reservados 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
