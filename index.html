@@ -11,7 +11,7 @@
 <body>
     <header>
         <div><!-- Problema: El título no es claro sobre el propósito del sitio -->
-            <h1>Bienvenido al Departamento de Informatica</h1>
+            <h1 id="inicio">Departamento de Informática</h1>
         </div>
         <div>
             <nav>
@@ -28,9 +28,53 @@
 
     </header>
 
+    <main>
 
 
-    <main id="inicio">
+        <!-- Problema: Falta de contraste entre el texto y el fondo -->
+        <section style="background-color: #00bfffaf; color: rgb(0, 0, 0); " id="servicios">
+            <h2>Nuestros servicios</h2>
+            <p>Ofrecemos los mejores servicios en la industria. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <!-- Problema: Enlace genérico sin contexto adecuado -->
+            <a href="index.html" class="link">Click para ver más</a>
+        </section>
+        <!-- Problema: Formulario con errores de diseño y falta de validación -->
+        <section id="contacto">
+
+            <div>
+                <form class="form">
+                    <h2 class="title">Contáctanos</h2>
+
+                    <label for="name">
+                        <!-- Problema: Falta de tamaño adecuado para el campo -->
+
+                        <input class="input" type="text" id="name" name="name" placeholder="" required="">
+                        <span>Nombre</span>
+                    </label>
+
+                    <label for="email">
+                        <!-- Problema: No hay validación de tipo de correo electrónico -->
+
+                        <input class="input" type="email" id="email" name="email" placeholder="" required="">
+                        <span>Correo electrónico</span>
+                    </label>
+
+                    <label for="message">
+                        <!-- Problema: Área de texto demasiado pequeña -->
+                        <textarea id="message" name="message" rows="5" cols="20"></textarea>
+                        <span>Mensaje</span>
+                    </label>
+                    <!-- Problema: Botón con texto ambiguo -->
+                    <button type="submit" class="submit">Enviar</button>
+                </form>
+            </div>
+
+        </section>
+
+
+
+
 
 
 
@@ -38,38 +82,31 @@
         <!-- Problema: Contenido confuso y no estructurado -->
         <section id="sobre_nosotros">
             <h2>Información importante</h2>
-            <p>123456789</p>
-            <p>"Lorem ipsum"</p>
-            <a href="https://example.com">https://example.com</a>
-        </section>
+            <div class="informacion">
 
-        <!-- Problema: Falta de contraste entre el texto y el fondo -->
-        <section style="background-color: rgb(252, 97, 97); color: rgb(0, 0, 0); " id="servicios">
-            <h2>Nuestros servicios</h2>
-            <p>Ofrecemos los mejores servicios en la industria. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <!-- Problema: Enlace genérico sin contexto adecuado -->
-            <a href="index.html" class="link">Ver mas Servicios</a>
-        </section>
-        <!-- Problema: Formulario con errores de diseño y falta de validación -->
-        <section id="contacto">
-            <h2>Contáctanos</h2>
-            <form>
-                <label for="name">Nombre:</label>
-                <!-- Problema: Falta de tamaño adecuado para el campo -->
-                <input type="text" id="name" name="name">
-
-                <label for="email">Correo electrónico:</label>
-                <!-- Problema: No hay validación de tipo de correo electrónico -->
-                <input type="text" id="email" name="email">
-
-                <label for="message">Mensaje:</label>
-                <!-- Problema: Área de texto demasiado pequeña -->
-                <textarea id="message" name="message" rows="1" cols="20"></textarea>
-
-                <!-- Problema: Botón con texto ambiguo -->
-                <button type="submit">Enviar</button>
-            </form>
+                <div>
+                    <img src="icon/telefono.png" alt="icono-telefono">
+                </div>
+                <div>
+                    <p>123456789</p>
+                </div>
+            </div>
+            <div class="informacion">
+                <div>
+                    <img src="icon/direccion.png" alt="icono-telefono">
+                </div>
+                <div>
+                    <p>"Lorem ipsum"</p>
+                </div>
+            </div>
+            <div class="informacion">
+                <div>
+                    <img src="icon/sitio-web.png" alt="icono-telefono" class="web">
+                </div>
+                <div>
+                    <a href="https://example.com">https://example.com</a>
+                </div>
+            </div>
         </section>
     </main>
 
