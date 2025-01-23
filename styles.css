@@ -89,14 +89,7 @@ form textarea {
     margin-bottom: 10px;
 }
 
-button {
-    background-color: #007BFF;
-    /* Problema: Color de botón que no resalta suficientemente */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
+
 
 img {
     width: 24px;
@@ -109,7 +102,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    background-color: #ddeeff;
 }
 
 .informacion {
@@ -128,14 +121,15 @@ img {
 #servicios {
     margin-top: 50px;
 }
+
 #contacto{
     border: none;
     box-shadow: none;
     display: flex;
     justify-content: center;
 }
-.link {
-    color: white;
+#link {
+   text-decoration: none;
 }
 
 h2 {
