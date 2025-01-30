@@ -1,294 +1,208 @@
-/* styles.css */
-
-/* Problema: No se define un esquema de colores claro */
+/* Estilos generales para mejorar contraste y accesibilidad */
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: white;
-    /* Problema: Uso de un color que puede ser demasiado claro */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #333;
     /* Problema: Contraste insuficiente con el fondo */
+    background-color: #f9f9f9;
+    /* Problema: Uso de un color que puede ser demasiado claro */
     margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #282e2e;
+    background: #004080;
     /* Problema: Falta de contraste con el texto */
-    padding: 10px;
-    text-align: center;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-nav {
-    width: 80vh;
+    padding: 20px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    text-align: center;
 }
 
-nav li {
-    margin: 5px;
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-nav a {
-    text-decoration: none;
-    color: rgb(211, 211, 211);
+nav ul li a {
+    color: white;
     /* Problema: Color sin consideración de accesibilidad */
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav a:active {
-    text-decoration: underline white 2px;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-a:hover {
-    color: #00bfff;
+/* Mejorando el contraste de las secciones */
+section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    width: 60%;
+}
+
+#sobre_nosotros {
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
-main section {
-    width: 75%;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #3333336c;
-    /* Problema: Uso de bordes poco visibles */
+.contenidoServicios {
+    background-color: rgb(207, 222, 255);
+    width: 50%;
     border-radius: 5px;
-    box-shadow: #3333336c 2px 2px 25px;
-
-}
-
-main section:hover {
-    transform: scale(1.05);
-    transition: 1s ease-in-out;
-}
-
-form label {
-    text-align: start;
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input,
-form textarea {
-    width: 80%;
-    /* Problema: Aplicado sin considerar el contexto */
-    margin-bottom: 10px;
-}
-
-
-
-img {
-    width: 24px;
-    height: 24px;
-}
-
-#sobre_nosotros {
-    display: flex;
-    margin-bottom: 50px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddeeff;
-}
-
-.informacion {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-
-.web {
-    width: 32px;
-    height: 32px;
-    margin-top: 10px;
+    padding: 15px;
 }
 
 #servicios {
-    margin-top: 50px;
-}
-
-#contacto{
-    border: none;
-    box-shadow: none;
+    background-color: #ffffff;
+    color: #333;
     display: flex;
     justify-content: center;
 }
-#link {
-   text-decoration: none;
-}
 
-h2 {
-    text-transform: capitalize;
-}
-
-p {
-    color: #585858;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    min-width: 300px;
-    padding: 20px;
+/* Botón más llamativo */
+button,
+.submit {
+    display: inline-block;
+    background: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    position: relative;
-    background-color: #ffffff;
-    color: #fff;
-    border: 1px solid #3333336c;
-    box-shadow: #3333336c 2px 2px 25px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.title {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
+button:hover,
+.submit:hover {
+    background: #005bb5;
+}
+
+/* Mejora del formulario */
+.form {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(207, 222, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input,
+textarea {
+    width: 92%;
+    /* Problema: Aplicado sin considerar el contexto */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Información de contacto */
+.informacion {
     display: flex;
     align-items: center;
-    padding-left: 30px;
-    color: #00bfff;
-}
-
-.title::before {
-    width: 18px;
-    height: 18px;
-}
-
-.title::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse 1s linear infinite;
-}
-
-.title::before,
-.title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: #00bfff;
-}
-
-
-
-
-.form label {
-    position: relative;
-}
-
-.form label .input {
-    background-color: #ddeeff;
-    color: #000000;
-    width: 95%;
-    padding: 20px 05px 05px 10px;
-    outline: 0;
-    border: 1px solid rgba(0, 0, 0, 0.562);
-    border-radius: 5px;
-}
-
-#message {
-    background-color: #ddeeff;
-    width: 95%;
-    padding: 30px 05px 05px 10px;
-    outline: 0;
-    border: 1px solid rgba(0, 0, 0, 0.562);
-    border-radius: 5px;
-    position: relative;
-    color: #000000;
-    font-size: 16px;
-}
-
-#message+span {
-    color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    font-size: 0.9em;
-    cursor: text;
-    font-weight: bold;
-
-    transition: 0.3s ease;
-}
-
-
-
-.form label .input+span {
-    color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-    font-weight: bold;
-}
-
-.form label .input:placeholder-shown+span {
-    top: 12.5px;
-    font-size: 0.9em;
-}
-
-.form label .input:focus+span,
-.form label .input:valid+span {
-    top: 0px;
-    font-size: 0.7em;
-    font-weight: 600;
-}
-
-.input {
-    font-size: medium;
-}
-
-.submit {
-    border: none;
-    outline: none;
+    gap: 10px;
+    background: white;
     padding: 10px;
+    margin: 10px 0;
     border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    transform: .3s ease;
-    background-color: #00bfff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
-.submit:hover {
-    background-color: #00bfff96;
-}
-
-@keyframes pulse {
-    from {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-
-    to {
-        transform: scale(1.8);
-        opacity: 0;
-    }
-}
-
+/* Pie de página con mejor contraste */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #282e2e;
-    /* Problema: Color similar al texto del pie de página */
-    font-size: 0.8em;
+    background: #004080;
+    color: white;
+    font-size: 14px;
+}
+
+#feedback {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+/* Estilo para el mensaje de error */
+#feedback.error {
+    color: white;
+    background-color: #f44336;
+}
+
+/* Estilo para el mensaje de éxito */
+#feedback.success {
+    color: white;
+    background-color: #4CAF50;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+        width: 80%;
+    }
+
+    .form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .informacion {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    #servicios {
+        background-color: #ffffff;
+        color: #333;
+        
+    }
+    .contenidoServicios {
+        background-color: rgb(207, 222, 255);
+        width: auto;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
 }

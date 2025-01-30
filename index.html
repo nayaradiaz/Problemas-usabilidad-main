@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Usability Test Project</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajuste del tamaño de los iconos */
+        .informacion img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,66 +31,51 @@
                 </ul>
             </nav>
         </div>
-
-
     </header>
 
     <main>
-
-
         <!-- Problema: Falta de contraste entre el texto y el fondo -->
-        <section style="background-color: #ddeeff; color: rgb(0, 0, 0); " id="servicios">
-            <h2>Nuestros servicios</h2>
-            <p>Ofrecemos los mejores servicios en la industria. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <!-- Problema: Enlace genérico sin contexto adecuado -->
-            <a href="index.html" id="link" class="submit">Ver más</a>
+        <section style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" id="servicios">
+
+            <div class="contenidoServicios">
+
+                <h2>Nuestros servicios</h2>
+                <p>Ofrecemos los mejores servicios en la industria. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.</p>
+                <!-- Problema: Enlace genérico sin contexto adecuado -->
+                <a href="index.html" id="link" class="submit">Ver más</a>
+            </div>
         </section>
+
         <!-- Problema: Formulario con errores de diseño y falta de validación -->
         <section id="contacto">
-
             <div>
                 <form class="form">
                     <h2 class="title">Contáctanos</h2>
-
                     <label for="name">
                         <!-- Problema: Falta de tamaño adecuado para el campo -->
-
-                        <input class="input" type="text" id="name" name="name" placeholder="" required="">
-                        <span>Nombre</span>
+                        <input class="input" type="text" id="name" name="name" placeholder="Tu Nombre" >
                     </label>
-
                     <label for="email">
                         <!-- Problema: No hay validación de tipo de correo electrónico -->
-
-                        <input class="input" type="email" id="email" name="email" placeholder="" required="">
-                        <span>Correo electrónico</span>
+                        <input class="input" type="email" id="email" name="email" placeholder="Tu Correo" >
                     </label>
-
                     <label for="message">
                         <!-- Problema: Área de texto demasiado pequeña -->
-                        <textarea id="message" name="message" rows="5" cols="20"></textarea>
-                        <span>Mensaje</span>
+                        <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje"></textarea>
                     </label>
                     <!-- Problema: Botón con texto ambiguo -->
-                    <button type="submit" class="submit">Enviar</button>
+                    <button type="submit" class="submit">Enviar Mensaje</button>
                 </form>
+                <div id="feedback"></div>
+
             </div>
-
         </section>
-
-
-
-
-
-
-
 
         <!-- Problema: Contenido confuso y no estructurado -->
         <section id="sobre_nosotros">
             <h2>Información importante</h2>
             <div class="informacion">
-
                 <div>
                     <img src="icon/telefono.png" alt="icono-telefono">
                 </div>
@@ -93,7 +85,7 @@
             </div>
             <div class="informacion">
                 <div>
-                    <img src="icon/direccion.png" alt="icono-telefono">
+                    <img src="icon/direccion.png" alt="icono-direccion">
                 </div>
                 <div>
                     <p>"Lorem ipsum"</p>
@@ -101,7 +93,7 @@
             </div>
             <div class="informacion">
                 <div>
-                    <img src="icon/sitio-web.png" alt="icono-telefono" class="web">
+                    <img src="icon/sitio-web.png" alt="icono-sitio-web" class="web">
                 </div>
                 <div>
                     <a href="https://example.com">https://example.com</a>
@@ -112,7 +104,7 @@
 
     <footer>
         <!-- Problema: Texto pequeño y sin contraste adecuado -->
-        <p style="font-size: 13px; color: rgb(255, 255, 255);">Derechos reservados 2024</p>
+        <p style="font-size: 13px; color: rgb(255, 255, 255);">Derechos reservados 2025</p>
     </footer>
 
     <script src="script.js"></script>
